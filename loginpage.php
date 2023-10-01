@@ -1,3 +1,17 @@
+<?php
+$seconds = date('s');
+$imageClass = ($seconds % 2 == 0) ? 'car.jpg' : 'car2.jpeg';
+$pageTitle = 'Попов 221-362 Лаб3';
+
+$specifications = array(
+    array('Поколение', 'Год выпуска', 'Мощность'),
+    array('1 (SA/FB)', '1978', '105 л.с.'),
+    array('2 (FC)', '1985', '185 л.с.'),
+    array('3 (FD)', '1992', '265 л.с. '),
+);
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -13,9 +27,9 @@
         <h1>Автомир</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="contactform.html">Форма обратной связи</a></li>
-                <li><a href="loginpage.html" class="highlighted">Войти</a></li>
+                <a <?php echo 'selected-menu'; ?>  href="index.php"><?php echo 'Главная'; ?></a>
+                <a <?php echo 'selected-menu'; ?>  href="contactform.php"><?php echo 'Форма обратной связи'; ?></a>
+                <a <?php echo 'selected-menu'; ?>  href="loginpage.php" class="highlighted"><?php echo 'Войти'; ?></a>
             </ul>
         </nav>
     </header>
@@ -39,6 +53,11 @@
         <p>&copy; 2023. Все права защищены.</p>
         <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
         <p>Телефон: +7 (999) 123-45-67</p>
+        <?php
+            date_default_timezone_set('Europe/Moscow');
+            $currentDate = date('d.m.Y в H:i:s');
+            echo 'Сформировано ' . $currentDate;
+            ?>
     </footer>
 </body>
 
