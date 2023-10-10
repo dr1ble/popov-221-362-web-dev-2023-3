@@ -25,7 +25,7 @@ $speclist = array(
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
+    <meta char  set="UTF-8">
     <title><?= $pageTitle ?></title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -36,9 +36,9 @@ $speclist = array(
         <h1>Автомир</h1>
         <nav>
             <ul>
-                <a <?php echo 'selected-menu'; ?>  href="index.php" class="highlighted"><?php echo 'Главная'; ?></a>
-                <a <?php echo 'selected-menu'; ?>  href="contactform.php"><?php echo 'Форма обратной связи'; ?></a>
-                <a <?php echo 'selected-menu'; ?> href="loginpage.php" ><?php echo 'Войти'; ?></a>
+                <a href = "<?php $name = "index.php"; echo $name; ?>"class="highlighted"><?php echo 'Главная'; ?></a>
+                <a href = "<?php $name = "contactform.php"; echo $name; ?>"<?php echo 'Форма обратной связи'; ?>></a>
+                <a href = "<?php $name = "loginpage.php"; echo $name;?>"<?php echo 'Войти'; ?>></a>
             </ul>
         </nav>
     </header>
